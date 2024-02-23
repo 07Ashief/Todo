@@ -25,11 +25,11 @@ function displayItems() {
     // let dueDate = todoList[i].dueDate;
     let {item, dueDate} = todoList[i];
     newHtml += `
-        <div>
+    
             <span>${item}</span>
             <span>${dueDate}</span>
-            <button onclick = 'todoList.splice(${i}, 1); displayItems();'>Delete</button>
-        </div>
+            <button class="btn-delete" onclick = 'todoList.splice(${i}, 1); displayItems();'>Delete</button>
+        
         `;
   }
   containerElement.innerHTML = newHtml;
